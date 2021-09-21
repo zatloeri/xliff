@@ -1,170 +1,170 @@
 {
-  "name": "xliff",
-  "version": "5.6.2",
-  "description": "xliff2js and js2xliff converter xliff utils",
-  "type": "module",
-  "main": "./cjs/index.js",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "require": "./cjs/index.js",
-      "default": "./esm/index.js"
+    "name": "xliff",
+    "version": "5.6.2",
+    "description": "xliff2js and js2xliff converter xliff utils",
+    "type": "module",
+    "main": "./cjs/index.js",
+    "exports": {
+        "./package.json": "./package.json",
+        ".": {
+            "require": "./cjs/index.js",
+            "default": "./esm/index.js"
+        },
+        "./createjs": {
+            "require": "./cjs/createjs.js",
+            "default": "./esm/createjs.js"
+        },
+        "./createxliff": {
+            "require": "./cjs/createxliff.js",
+            "default": "./esm/createxliff.js"
+        },
+        "./createxliff12": {
+            "require": "./cjs/createxliff12.js",
+            "default": "./esm/createxliff12.js"
+        },
+        "./js2xliff": {
+            "require": "./cjs/js2xliff.js",
+            "default": "./esm/js2xliff.js"
+        },
+        "./jsToXliff12": {
+            "require": "./cjs/jsToXliff12.js",
+            "default": "./esm/jsToXliff12.js"
+        },
+        "./ofjs": {
+            "require": "./cjs/ofjs.js",
+            "default": "./esm/ofjs.js"
+        },
+        "./sourceOfjs": {
+            "require": "./cjs/sourceOfjs.js",
+            "default": "./esm/sourceOfjs.js"
+        },
+        "./targetOfjs": {
+            "require": "./cjs/targetOfjs.js",
+            "default": "./esm/targetOfjs.js"
+        },
+        "./xliff2js": {
+            "require": "./cjs/xliff2js.js",
+            "default": "./esm/xliff2js.js"
+        },
+        "./xliff12ToJs": {
+            "require": "./cjs/xliff12ToJs.js",
+            "default": "./esm/xliff12ToJs.js"
+        },
+        "./cjs": {
+            "default": "./cjs/index.js"
+        },
+        "./cjs/createjs": {
+            "default": "./cjs/createjs.js"
+        },
+        "./cjs/createxliff": {
+            "default": "./cjs/createxliff.js"
+        },
+        "./cjs/createxliff12": {
+            "default": "./cjs/createxliff12.js"
+        },
+        "./cjs/js2xliff": {
+            "default": "./cjs/js2xliff.js"
+        },
+        "./cjs/jsToXliff12": {
+            "default": "./cjs/jsToXliff12.js"
+        },
+        "./cjs/ofjs": {
+            "default": "./cjs/ofjs.js"
+        },
+        "./cjs/sourceOfjs": {
+            "default": "./cjs/sourceOfjs.js"
+        },
+        "./cjs/targetOfjs": {
+            "default": "./cjs/targetOfjs.js"
+        },
+        "./cjs/xliff2js": {
+            "default": "./cjs/xliff2js.js"
+        },
+        "./cjs/xliff12ToJs": {
+            "default": "./cjs/xliff12ToJs.js"
+        },
+        "./esm": {
+            "default": "./esm/index.js"
+        },
+        "./esm/createjs": {
+            "default": "./esm/createjs.js"
+        },
+        "./esm/createxliff": {
+            "default": "./esm/createxliff.js"
+        },
+        "./esm/createxliff12": {
+            "default": "./esm/createxliff12.js"
+        },
+        "./esm/js2xliff": {
+            "default": "./esm/js2xliff.js"
+        },
+        "./esm/jsToXliff12": {
+            "default": "./esm/jsToXliff12.js"
+        },
+        "./esm/ofjs": {
+            "default": "./esm/ofjs.js"
+        },
+        "./esm/sourceOfjs": {
+            "default": "./esm/sourceOfjs.js"
+        },
+        "./esm/targetOfjs": {
+            "default": "./esm/targetOfjs.js"
+        },
+        "./esm/xliff2js": {
+            "default": "./esm/xliff2js.js"
+        },
+        "./esm/xliff12ToJs": {
+            "default": "./esm/xliff12ToJs.js"
+        }
     },
-    "./createjs": {
-      "require": "./cjs/createjs.js",
-      "default": "./esm/createjs.js"
+    "module": "./esm/index.js",
+    "dependencies": {
+        "xml-js": "1.6.11"
     },
-    "./createxliff": {
-      "require": "./cjs/createxliff.js",
-      "default": "./esm/createxliff.js"
+    "devDependencies": {
+        "@babel/cli": "7.14.5",
+        "@babel/core": "7.14.5",
+        "@babel/preset-env": "7.14.5",
+        "babel-plugin-add-module-exports": "1.0.4",
+        "browserify": "17.0.0",
+        "eslint": "7.28.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-config-standard": "16.0.3",
+        "eslint-plugin-import": "2.23.4",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-promise": "5.1.0",
+        "eslint-plugin-require-path-exists": "1.1.9",
+        "eslint-plugin-standard": "4.1.0",
+        "expect.js": "0.3.1",
+        "mocha": "9.0.0",
+        "prettier": "^2.4.1",
+        "uglify-js": "3.13.9"
     },
-    "./createxliff12": {
-      "require": "./cjs/createxliff12.js",
-      "default": "./esm/createxliff12.js"
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "compile:esm": "rm -rf esm && mkdir esm && BABEL_ENV=esm babel lib -d esm",
+        "compile:cjs": "rm -rf cjs && mkdir cjs && BABEL_ENV=cjs babel lib -d cjs && echo '{\"type\":\"commonjs\"}' > cjs/package.json",
+        "compile": "npm run compile:esm && npm run compile:cjs",
+        "browser": "browserify --standalone xliff cjs/index.js -o xliff.js && uglifyjs xliff.js --compress --mangle -o xliff.min.js",
+        "build": "npm run compile && npm run browser",
+        "test": "npm run lint && npm run build && mocha test -R spec",
+        "test:testing": "npm run lint && npm run build && mocha test/test-testing.js -R spec",
+        "preversion": "npm run test && npm run build && git push",
+        "postversion": "git push && git push --tags",
+        "prepare": "npm run build"
     },
-    "./js2xliff": {
-      "require": "./cjs/js2xliff.js",
-      "default": "./esm/js2xliff.js"
-    },
-    "./jsToXliff12": {
-      "require": "./cjs/jsToXliff12.js",
-      "default": "./esm/jsToXliff12.js"
-    },
-    "./ofjs": {
-      "require": "./cjs/ofjs.js",
-      "default": "./esm/ofjs.js"
-    },
-    "./sourceOfjs": {
-      "require": "./cjs/sourceOfjs.js",
-      "default": "./esm/sourceOfjs.js"
-    },
-    "./targetOfjs": {
-      "require": "./cjs/targetOfjs.js",
-      "default": "./esm/targetOfjs.js"
-    },
-    "./xliff2js": {
-      "require": "./cjs/xliff2js.js",
-      "default": "./esm/xliff2js.js"
-    },
-    "./xliff12ToJs": {
-      "require": "./cjs/xliff12ToJs.js",
-      "default": "./esm/xliff12ToJs.js"
-    },
-    "./cjs": {
-      "default": "./cjs/index.js"
-    },
-    "./cjs/createjs": {
-      "default": "./cjs/createjs.js"
-    },
-    "./cjs/createxliff": {
-      "default": "./cjs/createxliff.js"
-    },
-    "./cjs/createxliff12": {
-      "default": "./cjs/createxliff12.js"
-    },
-    "./cjs/js2xliff": {
-      "default": "./cjs/js2xliff.js"
-    },
-    "./cjs/jsToXliff12": {
-      "default": "./cjs/jsToXliff12.js"
-    },
-    "./cjs/ofjs": {
-      "default": "./cjs/ofjs.js"
-    },
-    "./cjs/sourceOfjs": {
-      "default": "./cjs/sourceOfjs.js"
-    },
-    "./cjs/targetOfjs": {
-      "default": "./cjs/targetOfjs.js"
-    },
-    "./cjs/xliff2js": {
-      "default": "./cjs/xliff2js.js"
-    },
-    "./cjs/xliff12ToJs": {
-      "default": "./cjs/xliff12ToJs.js"
-    },
-    "./esm": {
-      "default": "./esm/index.js"
-    },
-    "./esm/createjs": {
-      "default": "./esm/createjs.js"
-    },
-    "./esm/createxliff": {
-      "default": "./esm/createxliff.js"
-    },
-    "./esm/createxliff12": {
-      "default": "./esm/createxliff12.js"
-    },
-    "./esm/js2xliff": {
-      "default": "./esm/js2xliff.js"
-    },
-    "./esm/jsToXliff12": {
-      "default": "./esm/jsToXliff12.js"
-    },
-    "./esm/ofjs": {
-      "default": "./esm/ofjs.js"
-    },
-    "./esm/sourceOfjs": {
-      "default": "./esm/sourceOfjs.js"
-    },
-    "./esm/targetOfjs": {
-      "default": "./esm/targetOfjs.js"
-    },
-    "./esm/xliff2js": {
-      "default": "./esm/xliff2js.js"
-    },
-    "./esm/xliff12ToJs": {
-      "default": "./esm/xliff12ToJs.js"
+    "keywords": [
+        "xliff",
+        "json",
+        "js",
+        "translation"
+    ],
+    "author": "adrai",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/zatloeri/xliff.git"
     }
-  },
-  "module": "./esm/index.js",
-  "dependencies": {
-    "xml-js": "1.6.11"
-  },
-  "devDependencies": {
-    "@babel/cli": "7.14.5",
-    "@babel/core": "7.14.5",
-    "@babel/preset-env": "7.14.5",
-    "babel-plugin-add-module-exports": "1.0.4",
-    "browserify": "17.0.0",
-    "eslint": "7.28.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-config-standard": "16.0.3",
-    "eslint-plugin-import": "2.23.4",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-promise": "5.1.0",
-    "eslint-plugin-require-path-exists": "1.1.9",
-    "eslint-plugin-standard": "4.1.0",
-    "expect.js": "0.3.1",
-    "mocha": "9.0.0",
-    "prettier": "^2.4.1",
-    "uglify-js": "3.13.9"
-  },
-  "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "compile:esm": "rm -rf esm && mkdir esm && BABEL_ENV=esm babel lib -d esm",
-    "compile:cjs": "rm -rf cjs && mkdir cjs && BABEL_ENV=cjs babel lib -d cjs && echo '{\"type\":\"commonjs\"}' > cjs/package.json",
-    "compile": "npm run compile:esm && npm run compile:cjs",
-    "browser": "browserify --standalone xliff cjs/index.js -o xliff.js && uglifyjs xliff.js --compress --mangle -o xliff.min.js",
-    "build": "npm run compile && npm run browser",
-    "test": "npm run lint && npm run build && mocha test -R spec",
-    "test:testing": "npm run lint && npm run build && mocha test/test-testing.js -R spec",
-    "preversion": "npm run test && npm run build && git push",
-    "postversion": "git push && git push --tags"
-  },
-  "keywords": [
-    "xliff",
-    "json",
-    "js",
-    "translation"
-  ],
-  "author": "adrai",
-  "license": "MIT",
-  "homepage": "http://locize.com",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/locize/xliff.git"
-  }
 }
