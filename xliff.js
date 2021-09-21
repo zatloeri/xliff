@@ -674,11 +674,19 @@ function createTransUnitTag(key, resource, obj, options) {
   }
 
   if ("note" in resource) {
-    u.elements.push((0, _objectToXml.makeElement)("note", null, [(0, _objectToXml.makeText)(resource.note)]));
+    u.elements.push(createNoteElement(resource.note));
   }
 
   return u;
 }
+
+var createNoteElement = function createNoteElement(noteSpec) {
+  if (typeof noteSpec === "string") {
+    return (0, _objectToXml.makeElement)("note", null, [(0, _objectToXml.makeText)(noteSpec)]);
+  }
+
+  return (0, _objectToXml.makeElement)("note", _objectSpread({}, noteSpec[CUSTOM_ATTRIBUTES_KEY]), [(0, _objectToXml.makeText)(noteSpec.text)]);
+};
 
 var jsToXliff12 = function jsToXliff12(obj, opt, cb) {
   if (!cb && opt === undefined) {

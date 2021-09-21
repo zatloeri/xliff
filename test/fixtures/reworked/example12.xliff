@@ -12,10 +12,12 @@
       <trans-unit id="key.nested">
         <source>XLIFF Data Manager</source>
         <target>XLIFF Daten Manager</target>
+        <note>some note</note>
       </trans-unit>
       <trans-unit id="to &apos; &quot;esc&lt;ap&gt; &amp; e">
         <source>special chars</source>
         <target>spezielle Charakter</target>
+        <note from="developer">a complex note</note>
       </trans-unit>
     </body>
   </file>

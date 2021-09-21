@@ -11,11 +11,16 @@
             },
             "key.nested": {
                 "source": "XLIFF Data Manager",
-                "target": "XLIFF Daten Manager"
+                "target": "XLIFF Daten Manager",
+                "note": "some note"
             },
             "to ' \"esc<ap> & e": {
                 "source": "special chars",
-                "target": "spezielle Charakter"
+                "target": "spezielle Charakter",
+                "note": {
+                    "text": "a complex note",
+                    "additionalAttributes": { "from": "developer" }
+                }
             },
             "additionalAttributes": {
                 "datatype": "x-other",
