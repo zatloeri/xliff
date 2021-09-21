@@ -217,11 +217,10 @@ createxliff(
           "target": "XLIFF Daten Manager"
         },
         "group": {
-          "groupUnits":{
-            "groupUnit": {
-              "source": "Group",
-              "target": "Gruppe"
-            }
+          "elementType": "group",
+          "groupUnit": {
+            "source": "Group",
+            "target": "Gruppe"
           }
         }
       }
@@ -230,40 +229,8 @@ createxliff(
     "targetLanguage": "de-CH"
   }
 
-  import xliff12ToJs from 'xliff/xliff12ToJs'
-  xliff12ToJs(xliff, (err, res) => {
-    // res is like js
-  })
-  // or without callback
-  //const res = await xliff12ToJs(...
-
-  import jsToXliff12 from 'xliff/jsToXliff12'
-  jsToXliff12(js, (err, res) => {
-    // res is like xliff
-  })
-  // or without callback
-  //const res = await jsToXliff12(...
-
-  import createxliff12 from 'xliff/createxliff12'
-  createxliff12(
-    js.sourceLanguage,
-    js.targetLanguage,
-    {
-      "key1": "Hello",
-      "key2": "An application to manipulate and process XLIFF documents",
-      "key.nested": "XLIFF Data Manager"
-    },
-    {
-      "key1": "Hallo",
-      "key2": "Eine Applikation um XLIFF Dokumente zu manipulieren und verarbeiten",
-      "key.nested": "XLIFF Daten Manager"
-    },
-    'namespace1',
-    (err, res) => {
-    // res is like xliff
-  })
-  // or without callback
-  //const res = await createxliff12(...
+  xliff12ToJs IS OUTDATED AND THUS NOT SUPPORTED FOR NOW!!!!
+  createxliff12 IS OUTDATED AND THUS NOT SUPPORTED FOR NOW!!!!
 
 ```
 
