@@ -1,0 +1,41 @@
+{
+    "resources": {
+        "namespace1": {
+            "standalone": {
+                "source": "Hello",
+                "target": "Hallo"
+            },
+            "group1": {
+                "elementType": "group",
+                "in-group": {
+                    "source": "An application to manipulate and process XLIFF documents",
+                    "target": "Eine Applikation um XLIFF Dokumente zu manipulieren und verarbeiten"
+                },
+                "group-id": {
+                    "elementType": "group",
+                    "someId": {
+                        "source": "test source",
+                        "target": "test target",
+                        "note": "test note",
+                        "additionalAttributes": {
+                            "translate": "yes"
+                        }
+                    },
+                    "additionalAttributes": {
+                        "resname": "resname test",
+                        "id": false
+                    }
+                },
+                "nested-group1": {
+                    "elementType": "group",
+                    "in-nested-group": {
+                        "source": "XLIFF Data Manager",
+                        "target": "XLIFF Daten Manager"
+                    }
+                }
+            }
+        }
+    },
+    "sourceLanguage": "en-US",
+    "targetLanguage": "de-CH"
+}

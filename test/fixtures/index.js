@@ -2,6 +2,19 @@ const fs = require('fs')
 const path = require('path')
 
 module.exports = {
+  // slowly reworking to a different approach to attributes on elements
+  example_reworked: {
+    js: require('./reworked/example.json'),
+    xliff12: fs.readFileSync(path.join(__dirname, 'reworked/example12.xliff')).toString().replace(/\n$/, ''),
+  },
+  example_google_reworked: {
+    js: require('./reworked/example_google_action'),
+    xliff12: fs.readFileSync(path.join(__dirname, 'reworked/example_google_action.xliff')).toString().replace(/\n$/, '')
+  },
+  example_groups_reworked: {
+    js: require('./reworked/example_groups'),
+    xliff12: fs.readFileSync(path.join(__dirname, 'reworked/example_groups12.xliff')).toString().replace(/\n$/, '')
+  },
   example: {
     js: require('./example.json'),
     xliff: fs.readFileSync(path.join(__dirname, 'example.xliff')).toString().replace(/\n$/, ''),

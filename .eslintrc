@@ -1,10 +1,12 @@
 {
   "extends": [
     "standard",
-    "plugin:require-path-exists/recommended"
+    "plugin:require-path-exists/recommended",
+    "plugin:prettier/recommended"
   ],
   "plugins": [
-    "require-path-exists"
+    "require-path-exists",
+    "prettier"
   ],
   "globals": {
     "describe": false,

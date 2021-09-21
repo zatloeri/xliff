@@ -60,9 +60,9 @@ describe('single', () => {
   }, "with {indent: false}")
 
   test('jsToXliff12', (fn) => (done) => {
-    fn(fixtures.example.js, (err, res) => {
+    fn(fixtures.example_reworked.js, (err, res) => {
       expect(err).not.to.be.ok()
-      expect(res).to.eql(fixtures.example.xliff12)
+      expect(res).to.eql(fixtures.example_reworked.xliff12)
       done()
     })
   })
@@ -290,9 +290,9 @@ describe('Google Actions Xliff', () => {
   })
 
   test('jsToXliff12', (fn) => (done) => {
-    fn(fixtures.example_google.js, { xmlLangAttr: true }, (err, res) => {
+    fn(fixtures.example_google_reworked.js, { xmlLangAttr: true }, (err, res) => {
       expect(err).not.to.be.ok()
-      expect(res).to.eql(fixtures.example_google.xliff12)
+      expect(res).to.eql(fixtures.example_google_reworked.xliff12)
       done()
     })
   })
@@ -324,9 +324,9 @@ describe('groups', () => {
       })
     })
     test('jsToXliff12', (fn) => (done) => {
-      fn(fixtures.example_groups.js, (err, res) => {
+      fn(fixtures.example_groups_reworked.js, (err, res) => {
         expect(err).not.to.be.ok()
-        expect(res).to.eql(fixtures.example_groups.xliff12)
+        expect(res).to.eql(fixtures.example_groups_reworked.xliff12)
         done()
       })
     })
